@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>More Products</title>
+    <link rel="icon" href="website_logo.svg">
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .topareaofmoreproducts {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 5% 0 5%;
+            background-color: #F1F3F3;
+        }
+
+        .backbutton {
+            position: absolute;
+            top: 20px;
+            left: 5%;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            background-color: #E6F2FF;
+            color: black;
+            text-decoration: none;
+            font-family: Perpetua, "Book Antiqua", Georgia, serif;
+            font-size: 16px;
+            font-weight: bolder;
+            border: 1px solid #C8C8C8;
+            border-radius: 5px;
+        }
+
+        .backbutton:hover {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .searchareainput {
+            position: relative;
+            width: 380px;
+            max-width: 50%;
+        }
+
+        .searchareainput .iconsearch {
+            position: absolute;
+            top: 50%;
+            left: 14px;
+            transform: translateY(-50%);
+            font-size: 16px;
+        }
+
+        .searchareainput input {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 10px 16px 10px 42px;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            border: 1px solid #C8C8C8;
+            border-radius: 20px;
+            outline: none;
+            background-color: white;
+        }
+
+        .searchareainput input:focus {
+            border-color: #8FB8E8;
+        }
+
+        .products {
+            font-family: Georgia, serif;
+            background-color: #F1F3F3;
+            padding: 40px 20px 80px;
+        }
+
+        .products h1 {
+            text-align: center;
+            font-size: 40px;
+            margin: 0 0 8px;
+        }
+
+        .products .subtitle {
+            text-align: center;
+            font-size: 20px;
+            margin: 0 0 30px;
+        }
+
+        .categorybuttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .categorybuttons a {
+            display: inline-block;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+            background-color: white;
+            border: 1px solid #C9D3D4;
+            border-radius: 20px;
+            padding: 9px 16px;
+            margin: 5px;
+        }
+
+        .categorybuttons a:hover {
+            background-color: #E6F0FF;
+        }
+
+        .catergorytitles {
+            text-align: center;
+            font-size: 30px;
+            margin: 50px 0 20px;
+        }
+
+        .items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .itemlists {
+            box-sizing: border-box;
+            width: 215px;
+            height: 330px;
+            padding: 24px 20px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: white;
+            border: 1px solid #C8C8C8;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            font-family: "Book Antiqua", Palatino, serif;
+        }
+
+        .itemlists img {
+            display: block;
+            width: 100%;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .itemlists h3 {
+            margin: 12px 0 8px 0;
+            font-size: 17px;
+            line-height: 22px;
+        }
+
+        .itemlists p {
+            margin: 0;
+            font-size: 13px;
+            line-height: 1.4;
+            font-family: Arial, sans-serif;
+        }
+
+        .rentnowbutton {
+            margin-top: auto;
+            display: inline-block;
+            padding: 8px 28px;
+            background-color: #E6F2FF;
+            color: black;
+            text-decoration: none;
+            font-family: Perpetua, "Book Antiqua", Georgia, serif;
+            font-size: 16px;
+            font-weight: bolder;
+            border: 1px solid #C8C8C8;
+            border-radius: 5px;
+        }
+
+        .rentnowbutton:hover {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .backtotoplink {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .backtotoplink a {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            color: #0B7A7A;
+        }
+
+        footer {
+            text-align: center;
+            font-family: Perpetua;
+            font-size: 20px;
+            background-color: #E6F2FF;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="topareaofmoreproducts">
+        <a href="../homepage/home_page.html" target="_blank" class="backbutton">Back to Home</a>
+
+        <div class="searchareainput">
+            <span class="iconsearch">&#128269;</span>
+            <input type="text" placeholder="Search items...">
+        </div>
+    </div>
+
+    <section class="products" id="top">
+        <h1>Products</h1>
+        <p class="subtitle">Browse by category or scroll down to view all items available for rent.</p>
+
+        <div class="categorybuttons">
+            <a href="#all">View All (90)</a>
+            <a href="#electronics">Electronics (20)</a>
+            <a href="#accessories">Accessories (15)</a>
+            <a href="#schoolsupplies">School Supplies (15)</a>
+            <a href="#sports">Sports (15)</a>
+            <a href="#musicgames">Music &amp; Games (10)</a>
+            <a href="#outdoor">Outdoor (7)</a>
+            <a href="#appliances">Appliances (8)</a>
+        </div>
+
+        <div id="all"></div>
+
+        <h2 class="catergorytitles" id="electronics">Electronics</h2>
+        <div class="items">
+            <div class="itemlists">
+            <img src="products-images/Laptop.jpg" alt="">
+            <h3>Laptop</h3>
+            <p>Rent a laptop for a day, a week or the whole semester.</p>
+            <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+
+            <div class="itemlists">
+            <img src="products-images/Tablet.jpg" alt="">
+            <h3>Tablet</h3>
+            <p>Rent a tablet for a day, a week or the whole semester.</p>
+            <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+
+            <div class="itemlists">
+            <img src="products-images/Projector.jpg" alt="">
+            <h3>Projector</h3>
+            <p>Rent a projector for a day, a week or the whole semester.</p>
+            <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+
+            <div class="itemlists">
+            <img src="products-images/Camera.jpg" alt="">
+            <h3>Camera</h3>
+            <p>Rent a camera for a day, a week or the whole semester.</p>
+            <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+
+            <div class="itemlists">
+            <img src="products-images/Webcam.jpg" alt="">
+            <h3>Webcam</h3>
+            <p>Rent a webcam for a day, a week or the whole semester.</p>
+            <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            
+            <div class="itemlists">
+                <img src="products-images/portable_speaker.jpg" alt="">
+                <h3>Portable Speaker</h3>
+                <p>Rent a portable speaker for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/head_phones.jpg" alt="">
+                <h3>Headphones</h3>
+                <p>Rent a headphones for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/Microphone.jpg" alt="">
+                <h3>Microphone</h3>
+                <p>Rent a microphone for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/ring_light.jpg" alt="">
+                <h3>Ring Light</h3>
+                <p>Rent a ring light for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/phone_tripod.jpg" alt="">
+                <h3>Phone Tripod</h3>
+                <p>Rent a phone tripod for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/Router.jpg" alt="">
+                <h3>Router</h3>
+                <p>Rent a router for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/Scanner.jpg" alt="">
+                <h3>Scanner</h3>
+                <p>Rent a scanner for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/mini_printer.jpg" alt="">
+                <h3>Mini Printer</h3>
+                <p>Rent a mini printer for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/drawing_tablet.jpg" alt="">
+                <h3>Drawing Tablet</h3>
+                <p>Rent a drawing tablet for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/Keyboard.jpg" alt="">
+                <h3>Keyboard</h3>
+                <p>Rent a keyboard for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/Mouse.jpg" alt="">
+                <h3>Mouse</h3>
+                <p>Rent a mouse for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/Monitor.jpg" alt="">
+                <h3>Monitor</h3>
+                <p>Rent a monitor for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/Smart-watch.jpg" alt="">
+                <h3>Smart Watch</h3>
+                <p>Rent a smart watch for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/action_camera.jpg" alt="">
+                <h3>Action Camera</h3>
+                <p>Rent a action camera for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/Drone.jpg" alt="">
+                <h3>Drone</h3>
+                <p>Rent a drone for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+        </div>
+        <div class="backtotoplink"><a href="#top">Back to top</a></div>
+
+
+        <h2 class="catergorytitles" id="accessories">Accessories</h2>
+        <div class="items">
+            <div class="itemlists">
+                <img src="products-images/Charger.jpg" alt="">
+                <h3>Charger</h3>
+                <p>Rent a charger for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/powerbank.jpg" alt="">
+                <h3>Power Bank</h3>
+                <p>Rent a power bank for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/extension_cord.jpg" alt="">
+                <h3>Extension Cord</h3>
+                <p>Rent a extension cord for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/USB_Hub.jpg" alt="">
+                <h3>USB Hub</h3>
+                <p>Rent a usb hub for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/hdmi_cable.jpg" alt="">
+                <h3>HDMI Cable</h3>
+                <p>Rent a hdmi cable for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/USB_Flas_Drive.jpg" alt="">
+                <h3>USB Flash Drive</h3>
+                <p>Rent a usb flash drive for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/external_hard_drive.jpg" alt="">
+                <h3>External Hard Drive</h3>
+                <p>Rent a external hard drive for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/memory_card.jpg" alt="">
+                <h3>Memory Card</h3>
+                <p>Rent a memory card for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/card_reader.jpg" alt="">
+                <h3>Card Reader</h3>
+                <p>Rent a card reader for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/laptop_stand.jpg" alt="">
+                <h3>Laptop Stand</h3>
+                <p>Rent a laptop stand for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/Stylus_pen.jpg" alt="">
+                <h3>Stylus Pen</h3>
+                <p>Rent a stylus pen for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/desk_lamp.jpg" alt="">
+                <h3>Desk Lamp</h3>
+                <p>Rent a desk lamp for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/phone_case.jpg" alt="">
+                <h3>Phone Case</h3>
+                <p>Rent a phone case for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/laptop_bag.jpg" alt="">
+                <h3>Laptop Bag</h3>
+                <p>Rent a laptop bag for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/cable_organizer.jpg" alt="">
+                <h3>Cable Organizer</h3>
+                <p>Rent a cable organizer for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+        </div>
+        <div class="backtotoplink"><a href="#top">Back to top</a></div>
+
+
+        <h2 class="catergorytitles" id="schoolsupplies">School Supplies</h2>
+        <div class="items">
+            <div class="itemlists">
+                <img src="products-images/scientificcalculator.jpg" alt="">
+                <h3>Scientific Calculator</h3>
+                <p>Rent a scientific calculator for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/basiccalculator.jpg" alt="">
+                <h3>Basic Calculator</h3>
+                <p>Rent a basic calculator for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/t-square.jpg" alt="">
+                <h3>T-Square</h3>
+                <p>Rent a t-square for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/compassset.jpg" alt="">
+                <h3>Compass Set</h3>
+                <p>Rent a compass set for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/architectscale.jpg" alt="">
+                <h3>Architect Scale</h3>
+                <p>Rent a architect scale for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/draftingscale.jpg" alt="">
+                <h3>Drafting Table</h3>
+                <p>Rent a drafting table for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/clipboard.jpg" alt="">
+                <h3>Clipboard</h3>
+                <p>Rent a clipboard for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/whiteboard.jpg" alt="">
+                <h3>Whiteboard</h3>
+                <p>Rent a whiteboard for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/whiteboardmarkers.jpg" alt="">
+                <h3>Whiteboard Markers</h3>
+                <p>Rent a whiteboard markers for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/easel.jpg" alt="">
+                <h3>Easel</h3>
+                <p>Rent a easel for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/posterboardset.jpg" alt="">
+                <h3>Poster Board Set</h3>
+                <p>Rent a poster board set for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/paintset.jpg" alt="">
+                <h3>Paint Set</h3>
+                <p>Rent a paint set for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/brushset.jpg" alt="">
+                <h3>Brush Set</h3>
+                <p>Rent a brush set for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/cuttingmat.jpg" alt="">
+                <h3>Cutting Mat</h3>
+                <p>Rent a cutting mat for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/binderset.jpg" alt="">
+                <h3>Binder Set</h3>
+                <p>Rent a binder set for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+        </div>
+        <div class="backtotoplink"><a href="#top">Back to top</a></div>
+
+
+        <h2 class="catergorytitles" id="sports">Sports</h2>
+        <div class="items">
+            <div class="itemlists">
+                <img src="products-images/badmintonracket.jpg" alt="">
+                <h3>Badminton Racket</h3>
+                <p>Rent a badminton racket for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/tabletennispaddle.jpg" alt="">
+                <h3>Table Tennis Paddle</h3>
+                <p>Rent a table tennis paddle for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/basketball.jpg" alt="">
+                <h3>Basketball</h3>
+                <p>Rent a basketball for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/voleyball.jpg" alt="">
+                <h3>Volleyball</h3>
+                <p>Rent a volleyball for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/football.jpg" alt="">
+                <h3>Football</h3>
+                <p>Rent a football for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/frisbee.jpg" alt="">
+                <h3>Frisbee</h3>
+                <p>Rent a frisbee for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/jumprope.jpg" alt="">
+                <h3>Jump Rope</h3>
+                <p>Rent a jump rope for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/yogamat.jpg" alt="">
+                <h3>Yoga Mat</h3>
+                <p>Rent a yoga mat for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/dumbbells.jpg" alt="">
+                <h3>Dumbbells</h3>
+                <p>Rent a dumbbells for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/tennisracket.jpg" alt="">
+                <h3>Tennis Racket</h3>
+                <p>Rent a tennis racket for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/swimgoggles.jpg" alt="">
+                <h3>Swim Goggles</h3>
+                <p>Rent a swim goggles for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/resistancebands.jpg" alt="">
+                <h3>Resistance Bands</h3>
+                <p>Rent a resistance bands for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/skateboard.jpg" alt="">
+                <h3>Skateboard</h3>
+                <p>Rent a skateboard for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/bicycle.jpg" alt="">
+                <h3>Bicycle</h3>
+                <p>Rent a bicycle for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/helmet.jpg" alt="">
+                <h3>Helmet</h3>
+                <p>Rent a helmet for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+        </div>
+        <div class="backtotoplink"><a href="#top">Back to top</a></div>
+
+        <h2 class="catergorytitles" id="musicgames">Music &amp; Games</h2>
+        <div class="items">
+            <div class="itemlists">
+                <img src="products-images/guitar.jpg" alt="">
+                <h3>Guitar</h3>
+                <p>Rent a guitar for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/ukulele.jpg" alt="">
+                <h3>Ukulele</h3>
+                <p>Rent a ukulele for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/keyboardpiano.jpg" alt="">
+                <h3>Keyboard Piano</h3>
+                <p>Rent a keyboard piano for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/musicstand.jpg" alt="">
+                <h3>Music Stand</h3>
+                <p>Rent a music stand for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/chessset.jpg" alt="">
+                <h3>Chess Set</h3>
+                <p>Rent a chess set for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/playingcards.jpg" alt="">
+                <h3>Playing Cards</h3>
+                <p>Rent a playing cards for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/boardgame.jpg" alt="">
+                <h3>Board Game</h3>
+                <p>Rent a board game for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/karaokemic.jpg" alt="">
+                <h3>Karaoke Mic</h3>
+                <p>Rent a karaoke mic for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/gamecontroller.jpg" alt="">
+                <h3>Game Controller</h3>
+                <p>Rent a game controller for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/cajon.jpg" alt="">
+                <h3>Cajon</h3>
+                <p>Rent a cajon for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+        </div>
+        <div class="backtotoplink"><a href="#top">Back to top</a></div>
+
+        <h2 class="catergorytitles" id="outdoor">Outdoor</h2>
+        <div class="items">
+            <div class="itemlists">
+                <img src="products-images/campingtent.jpg" alt="">
+                <h3>Camping Tent</h3>
+                <p>Rent a camping tent for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/sleepingbag.jpg" alt="">
+                <h3>Sleeping Bag</h3>
+                <p>Rent a sleeping bag for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/flashlight.jpg" alt="">
+                <h3>Flashlight</h3>
+                <p>Rent a flashlight for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/hikingbag.jpg" alt="">
+                <h3>Hiking Bag</h3>
+                <p>Rent a hiking bag for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/coolerbag.jpg" alt="">
+                <h3>Cooler Box</h3>
+                <p>Rent a cooler box for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/umbrella.jpg" alt="">
+                <h3>Umbrella</h3>
+                <p>Rent a umbrella for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/raincoat.jpg" alt="">
+                <h3>Raincoat</h3>
+                <p>Rent a raincoat for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+        </div>
+        <div class="backtotoplink"><a href="#top">Back to top</a></div>
+
+
+        <h2 class="catergorytitles" id="appliances">Appliances</h2>
+        <div class="items">
+            <div class="itemlists">
+                <img src="products-images/ricecooker.jpg" alt="">
+                <h3>Rice Cooker</h3>
+                <p>Rent a rice cooker for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/electrickettle.jpg" alt="">
+                <h3>Electric Kettle</h3>
+                <p>Rent a electric kettle for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/hotplate.jpg" alt="">
+                <h3>Hot Plate</h3>
+                <p>Rent a hot plate for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/blender.jpg" alt="">
+                <h3>Blender</h3>
+                <p>Rent a blender for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/toaster.jpg" alt="">
+                <h3>Toaster</h3>
+                <p>Rent a toaster for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/iron.jpg" alt="">
+                <h3>Iron</h3>
+                <p>Rent a iron for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/hairdryer.jpg" alt="">
+                <h3>Hair Dryer</h3>
+                <p>Rent a hair dryer for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+            <div class="itemlists">
+                <img src="products-images/electricfan.jpg" alt="">
+                <h3>Electric Fan</h3>
+                <p>Rent a electric fan for a day, a week or the whole semester.</p>
+                <a href="#" class="rentnowbutton">Rent Now</a>
+            </div>
+        </div>
+        <div class="backtotoplink"><a href="#top">Back to top</a></div>
+    </section>
+
+    <footer>
+        <p>ALL RIGHT RESERVED 2026</p>
+        <p>JaTyRoMa</p>
+    </footer>
+
+</body>
+</html>

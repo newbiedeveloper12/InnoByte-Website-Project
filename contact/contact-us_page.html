@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <link rel="icon" href="website_logo.svg">
+    <style>
+
+        /*
+
+
+        DEBUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUG ICONSSSSSSS
+
+
+        */
+
+    	body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo {
+            display: block;
+            height: 100px;
+            width: 200px;
+            margin-left: 5%;
+        }
+
+        .contactusnavigation {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            height: 56px;
+            margin: 0;
+            background-color: #E6F2FF;
+            font-weight: bolder;
+            font-family: Perpetua, "Book Antiqua", Georgia, serif;
+        }
+
+        .contactusnavigationtexts {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            gap: 50px;
+            margin: 0 10% 0 0;
+            padding: 0;
+            font-family: Perpetua, "Book Antiqua", Georgia, serif;
+        }
+
+        .contactusnavigationtexts a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            padding: 8px 12px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contactusnavigationtexts a:hover, .contactusnavigationtexts a.active {
+            background-color: #FFFFFF;
+            color: black;
+            border-radius: 5px;
+        }
+
+        .backgroundoftheinputs {
+            font-family: Georgia, "Times New Roman", serif;
+            padding: 70px 8% 90px 8%;
+        }
+
+        .contacttexttitle {
+            font-size: 64px;
+            margin: 0 0 60px 0;
+            text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact_wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 80px;
+        }
+
+        .contactusinfos {
+            width: 700px;
+            max-width: 100%;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.18);
+        }
+
+        .contactusinfos h3 {
+            font-size: 32px;
+            margin: 70px 45px 70px 45px;
+        }
+
+        .contactusforuserinputs {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin: 0 45px 55px 45px;
+        }
+
+        .contactusforuserinputs input {
+            min-width: 0;
+            border: none;
+            border: 2px solid black;
+            outline: none;
+            padding: 10px 4px;
+            font-family: inherit;
+            font-size: 20px;
+        }
+
+        .usermessage {
+            margin: 60px 45px 50px 45px;
+            border: 2px solid black;
+        }
+
+        .usermessage textarea {
+            width: 100%;
+            height: 160px;
+            border: none;
+            outline: none;
+            resize: none;
+            font-family: inherit;
+            font-size: 20px;
+            box-sizing: border-box;
+        }
+
+        .sendbuttoncontactus {
+            display: block;
+            width: 100%;
+            padding: 28px 0;
+            border: none;
+            background-color: #E3F0FF;
+            font-family: inherit;
+            font-size: 26px;
+            font-weight: bold;
+            cursor: pointer;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+        }
+
+        .sendbuttoncontactus:hover {
+            background-color: #cfe5ff;
+        }
+
+        .iconsandtextsincontactuspage {
+            flex: 1;
+            min-width: 400px;
+        }
+
+        .informationitem {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .infromationicons {
+            width: 130px;
+            height: 130px;
+            background-color: #FFFFFF;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .infromationicons img {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+        }
+
+        .informationtexts h4 {
+            font-size: 30px;
+            margin: 0 0 20px 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+        }
+
+        .informationtexts p {
+            font-size: 22px;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .informationtexts a {
+            display: block;
+            color: black;
+            text-decoration: none;
+            font-size: 22px;
+            line-height: 1.5;
+        }
+
+        footer {
+            text-align: center;
+            font-family: Perpetua;
+            font-size: 20px;
+            background-color: #E6F2FF;
+            padding: 10px;
+        }        
+
+    </style>
+</head>
+<body>
+
+ <img src="website_logo.png" class="logo">
+
+ <nav class="contactusnavigation">
+    <ul class="contactusnavigationtexts">
+        <li><a href="../homepage/home_page.html">HOME</a></li>
+        <li><a href="../aboutus/about-us_page.html" target="_blank">ABOUT US</a></li>
+        <li><a href="../moreservices/moreservices.html" target="_blank">SERVICES</a></li>
+        <li><a href="../products/products.html" target="_blank">PRODUCTS</a></li>
+        <li><a href="contact-us_page.html" target="_blank" class="active">CONTACT US</a></li>
+    </ul>
+</nav>
+
+<section class="backgroundoftheinputs">
+    <h1 class="contacttexttitle">Contact</h1>
+
+    <div class="contact_wrapper">
+
+        <div class="contactusinfos">
+
+            <h3>Send us message</h3>
+
+            <div class="contactusforuserinputs">
+
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+                <input type="text" placeholder="Address">
+                <input type="text" placeholder="Contact Number">
+                <input type="text" placeholder="Email">
+
+            </div>
+
+            <div class="usermessage">
+                <textarea placeholder="Your Message"></textarea>
+
+            </div>
+
+            <button class="sendbuttoncontactus">Submit
+            </button>
+        </div>
+
+        <div class="iconsandtextsincontactuspage">
+
+            <div class="informationitem">
+                <div class="infromationicons">
+                    <img src="location.jpg" alt="Location">
+                </div>
+                <div class="informationtexts">
+
+                    <h4>Address</h4>
+
+                    <p>Guang-guang, Dahican, City of Mati, Davao Oriental, 8200</p>
+                </div>
+
+            </div>  
+
+            <div class="informationitem">
+                <div class="infromationicons">
+
+                    <img src="number.jpg" alt="Phone"></div>
+                    <div class="informationtexts">
+
+                        <h4>Phone</h4>
+                        <p>+63 945 869 5481</p>
+                    </div>
+
+                </div>
+
+                <div class="informationitem">
+
+                    <div class="infromationicons">
+
+                        <img src="email.jpg" alt="Email">
+                    </div>
+                    <div class="informationtexts">
+
+                        <h4>Email Us</h4>
+
+                        <p>innobyte.dorsu@gmail.com</p>
+                    </div>
+
+                </div>
+
+                <div class="informationitem">
+                    <div class="infromationicons">
+                        <img src="socmed.jpg" alt="Social media">
+                    </div>
+                    <div class="informationtexts">
+                        <h4>Follow us on IG, FB, YT, TT</h4>
+                        <a href="https://www.facebook.com/profile.php?id=61596202627506" target="_blank">Facebook: InnoByte</a>
+                        <a href="https://www.instagram.com/innobytetech/" target="_blank">Instagram: innobytetech</a>
+                        <a href="http://www.youtube.com/@INNOBYTE-RVTM" target="_blank">YouTube: INNOBYTEFROMYT</a>
+                        <a href="https://www.tiktok.com/@innobytetech/" target="_blank">TikTok: INNOBYTE</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>ALL RIGHT RESERVED 2026</p>
+        <p>JaTyRoMa</p>
+    </footer>
+
+</body>
+</html>
